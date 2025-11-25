@@ -45,7 +45,8 @@ delete Students where Age<10
 
 --5. Score üçün yeni þ?rt ?lav? edin(score yalniz 5 e bolunen edeler olmalidir)
 alter table Students 
-Add constraint chck Check(Score>60 and Score<100)
+with nocheck
+Add constraint cck Check(Score%5=0)
 
 --6 “TopStudents” adlý c?dv?l yaradin ID,FullName,Score olsun  (Students c?dv?lind?n Score > 90 olanlarý TopStudents-? insert edin)
  create table TopStudents(
